@@ -1,11 +1,17 @@
 {
-  "name": "design-pattern-jsdoc",
-  "module": "index.js",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name": "design-pattern-jsdoc",
+    "module": "index.js",
+    "type": "module",
+    "scripts": {
+        "compile": "./node_modules/.bin/jsdoc "
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "jsdoc": "^4.0.3"
+    }
 }
