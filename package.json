@@ -3,7 +3,8 @@
     "module": "index.js",
     "type": "module",
     "scripts": {
-        "compile": "./node_modules/.bin/jsdoc "
+        "compile": "./node_modules/.bin/jsdoc ",
+        "test": "bun test tests/solid/*"
     },
     "devDependencies": {
         "@types/bun": "latest"
