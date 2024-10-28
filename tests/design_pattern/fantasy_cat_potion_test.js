@@ -6,6 +6,8 @@ import { CatPotionMaker } from "../../src/design_pattern/strategy/CatPotionMaker
 import { SlowBrewingStrategy } from "../../src/design_pattern/strategy/SlowBrewingStrategy";
 import { RapidBoilingStrategy } from "../../src/design_pattern/strategy/RapidBoilingStrategy";
 import { Potion } from "../../src/design_pattern/model/Potion";
+import { StrengthEnchantment } from "../../src/design_pattern/decorator/StrengthEnchantment";
+import { AgilityEnchantment } from "../../src/design_pattern/decorator/AgilityEnchantment";
 
 
 describe("Fantasy Cat Potion System - All Patterns Combined", () => {
@@ -39,5 +41,11 @@ describe("Fantasy Cat Potion System - All Patterns Combined", () => {
         // 5. Apply brewing strategies to built potions
         expect(slowBrewCat.brewPotion(healingPotion)).toBe("Potion made with Unicorn Horn, Fairy Dust brewed slowly with care!");
         expect(rapidBoilCat.brewPotion(invisibilityPotion)).toBe("Potion made with Chameleon Scale, Moonlight Dew brewed quickly with a rapid boil!");
+
+        // 6. Apply Decorator Pattern to add enchantments
+        const strengthPotion = new StrengthEnchantment(new Potion(healingPotion));
+        const agilityPotion = new AgilityEnchantment(new Potion(invisibilityPotion));
+        expect(strengthPotion.brew()).toBe("Potion made with Unicorn Horn, Fairy Dust brewed! with a Strength spell!");
+        expect(agilityPotion.brew()).toBe("Potion made with Chameleon Scale, Moonlight Dew brewed! with an Agility spell!");
     });
 });
