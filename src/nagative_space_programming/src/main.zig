@@ -24,10 +24,11 @@ fn calculateArea(width: i32, height: i32) i32 {
 
 
 fn calculateAreaPositive(width: i32, height: i32) i32 {
-    const safe_width = if (width < 0) 0 else width;
-    const safe_height = if (height < 0) 0 else height;
+    if(width < 0 or height < 0) {
+        return 0;
+    }
 
-    return safe_width * safe_height;
+    return width * height;
 }
 
 test "test calculateArea with expected area value" {
