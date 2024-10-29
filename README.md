@@ -1,15 +1,24 @@
-# design-pattern-jsdoc
+# Design Pattern - JSDoc
+This repository contains examples of various **Design patterns**, **SOLID principles**, and **Negative space programming** concepts, with well-documented code using **JSDoc**. It's crafted as a learning tool for bootcamp students or developers looking to strengthen their understanding of structured programming practices.
 
-To install dependencies:
+## Installation and Testing
+1. **Install dependencies:**
+    ```
+    bun install
+    ```
+2. **Run SOLID principle tests:**
+    ```
+    bun solid
+    ```
+ 3. **Run Design Pattern tests:**
+    ```
+    bun ds
+    ```
+## Technologies
 
-```bash
-bun install
-```
+-   **Bun** for runtime execution
+-   **JavaScript** with JSDoc for documentation
+-  **Zig** with nagitive space programming concept
+## Purpose
 
-To run:
-
-```bash
-bun run index.js
-```
-
-This project was created using `bun init` in bun v1.1.22. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Aimed at bootcamp participants and learners, this project helps clarify foundational programming concepts and design practices.
